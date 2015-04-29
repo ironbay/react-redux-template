@@ -1,0 +1,7 @@
+web:
+    build: ./dev-env
+    command: bash -c "nginx && cd /www && npm run debug"
+    volumes:
+        - .:www
+    ports:
+        - "8080:80"
