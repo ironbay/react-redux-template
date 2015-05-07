@@ -8,6 +8,6 @@ config.plugins = [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),   
 ]
-config.module.loaders[0].loaders = ['react-hot', 'jsx?'];
+config.module.loaders[0].loaders = ['react-hot', 'babel-loader'];
 
 module.exports = config;
