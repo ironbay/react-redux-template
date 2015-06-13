@@ -2,10 +2,10 @@ var webpack = require('webpack');
 
 module.exports = {
     resolve: {
-        modulesDirectories: ["node_modules", "js", "css"]
+        modulesDirectories: ["node_modules", "components", "stores"]
     },
     entry: [
-        './js/main.jsx'
+        './components/routes.jsx'
     ],
     output: {
         path: __dirname + '/build/',

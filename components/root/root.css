@@ -7,3 +7,10 @@ input:focus, select:focus {
 a {
     text-decoration: none;
 }
+section.root {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
