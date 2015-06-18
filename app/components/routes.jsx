@@ -4,7 +4,7 @@ var Router = require("react-router")
 var Route = Router.Route;
 var Redirect = Router.Redirect;
 
-var Root = require("root/base.jsx");
+var Root = require("root");
 
 var routes = (
 	<Route name="app" path="/" handler={Root}>

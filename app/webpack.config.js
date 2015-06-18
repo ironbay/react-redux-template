@@ -2,7 +2,8 @@ var webpack = require('webpack');
 
 module.exports = {
     resolve: {
-        modulesDirectories: ["node_modules", "components", "stores"]
+        modulesDirectories: ["node_modules", "components", "stores"],
+		extensions : ["", ".js", ".jsx"]
     },
     entry: [
         './components/routes.jsx'

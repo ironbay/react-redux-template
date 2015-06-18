@@ -1,9 +1,9 @@
-require("./reset.css");
-require("./root.css")
+require("root/reset.css");
+require("root/root.css")
 var React = require('react');
 var Router = require('react-router');
 
-var Header = require("header/base.jsx")
+var Header = require("header")
 
 
 var app = React.createClass({
