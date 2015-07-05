@@ -12,7 +12,6 @@ export default class Header {
     	bindActionCreators(Example, this.props.dispatch).test()
 	}
 	render() {
-		console.log(this.props)
 		return (
 			<header>
 				{this.props.example.foo}
