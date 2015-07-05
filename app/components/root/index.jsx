@@ -1,23 +1,18 @@
-require("root/reset.css");
-require("root/root.css")
-var React = require('react');
-var Router = require('react-router');
-
-var Header = require("header")
+import "root/reset.css"
+import "root/root.css"
+import React from "react"
+import Header from "header"
 
 
-var app = React.createClass({
-
-	render: function() {
+export default class Root {
+	render() {
 		return (
 			<section className="root">
 				<Header />
 				<section className="main">
-					<Router.RouteHandler />
+				{this.props.children}
 				</section>
 			</section>
 		)
 	}
-});
-
-module.exports = app;
+}

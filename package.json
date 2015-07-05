@@ -1,0 +1,28 @@
+{
+  "name": "changeme",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "debug": "node ./webpack/dev-server.js",
+    "build": "node node_modules/webpack/bin/webpack.js -p --colors --progress --config=./webpack/prod.config.js"
+  },
+  "author": "",
+  "license": "BSD",
+  "devDependencies": {
+    "autoprefixer-loader": "^2.0.0",
+    "babel-core": "^5.6.15",
+    "babel-loader": "^5.3.1",
+    "css-loader": "^0.15.1",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "node-libs-browser": "^0.5.2",
+    "react-hot-loader": "^1.2.7",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "dependencies": {
+    "react": "^0.13.3",
+    "react-router": "v1.0.0-beta2",
+    "redux": "^0.12.0"
+  }
+}
