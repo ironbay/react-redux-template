@@ -15,7 +15,6 @@ export default class Header {
 		this.props.dispatch(AutoExample.testAsync("bar"))
 	}
 	render() {
-		console.log(this.props)
 		return (
 			<header>
 				<div>Normal: {this.props.example.message}</div>
