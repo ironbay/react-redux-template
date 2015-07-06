@@ -10,6 +10,7 @@ import AutoExample from "actions/auto-example"
 export default class Header {
 	componentWillMount() {
 		this.props.dispatch(Example.test("hello"))
+		this.props.dispatch(Example.testAsync("goodbye"))
 		//this.props.dispatch(AutoExample.testAsync("hello"))
 		//this.props.dispatch(AutoExample.test("hello"))
 	}
