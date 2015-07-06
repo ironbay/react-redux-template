@@ -2,10 +2,18 @@ import * as Actions from "constants/actions"
 import createStore from "util/store"
 
 export default createStore({}, {
-	[Actions.TEST]: state => {
+
+	test(state,action) {
 		return {
 			...state,
-			"foo" : "bar"
+			"foo" : action.message
 		}
 	},
+	testAsync (state, action) {
+		return {
+			...state,
+			"foo" : action.message
+		}
+	}
+
 });

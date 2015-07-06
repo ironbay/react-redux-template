@@ -1,15 +1,17 @@
 import "header/header.css"
 import React from "react"
-import { bindActionCreators } from 'redux';
 import { connect } from 'redux/react';
 import * as Example from "actions/example"
+import AutoExample from "actions/auto-example"
 
 @connect(state => {
 	return state
 })
 export default class Header {
 	componentWillMount() {
-    	bindActionCreators(Example, this.props.dispatch).test()
+		this.props.dispatch(Example.test("hello"))
+		//this.props.dispatch(AutoExample.testAsync("hello"))
+		//this.props.dispatch(AutoExample.test("hello"))
 	}
 	render() {
 		return (
