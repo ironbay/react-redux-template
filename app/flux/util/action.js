@@ -21,6 +21,7 @@ export default function createActions(actions) {
 					type : key,
 					...(data || {})
 				}
+				console.log(r)
 				return r 
 			}
 		})(k)

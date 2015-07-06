@@ -3,13 +3,13 @@ import createStore from "util/store"
 
 export default createStore({}, {
 
-	test(state,action) {
+	[Actions.TEST](state,action) {
 		return {
 			...state,
 			"foo" : action.message
 		}
 	},
-	testAsync (state, action) {
+	[Actions.TEST_ASYNC](state, action) {
 		return {
 			...state,
 			"foo" : action.message

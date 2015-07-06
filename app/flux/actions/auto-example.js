@@ -7,7 +7,6 @@ import createActions from "util/action"
 
 export default createActions({
 	test(message) {
-		console.log(message)
 		return {
 			message : message
 		}
