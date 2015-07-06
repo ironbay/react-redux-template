@@ -9,15 +9,17 @@ import AutoExample from "actions/auto-example"
 })
 export default class Header {
 	componentWillMount() {
-		this.props.dispatch(Example.test("hello"))
+		this.props.dispatch(Example.test("wait 2 seconds..."))
 		this.props.dispatch(Example.testAsync("goodbye"))
-		//this.props.dispatch(AutoExample.testAsync("hello"))
-		//this.props.dispatch(AutoExample.test("hello"))
+		this.props.dispatch(AutoExample.test("wait for me too"))
+		this.props.dispatch(AutoExample.testAsync("bar"))
 	}
 	render() {
+		console.log(this.props)
 		return (
 			<header>
-				{this.props.example.foo}
+				<div>Normal: {this.props.example.message}</div>
+				<div>Auto: {this.props.autoExample.message}</div>
 			</header>
 		);
 	}

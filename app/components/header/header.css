@@ -4,6 +4,7 @@ header {
     background: #262B2F;
     color: white;
     display: flex;
-    align-items: center;
+    justify-content: center;
     padding: 0px 30px;
+    flex-direction: column;
 }
