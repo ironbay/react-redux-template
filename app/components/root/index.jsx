@@ -10,7 +10,6 @@ export default class Root {
 	render() {
 		return (
 			<section className="root">
-				<Header />
 				<section className="main">
 				{this.props.children}
 				</section>
