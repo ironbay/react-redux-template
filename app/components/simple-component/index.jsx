@@ -9,7 +9,7 @@ export default class SimpleComponent extends React.Component {
 		}
 	}
 	render() {
-		// Read the color value passed in by parent prop and create an inline style for the button
+		// Read the color value passed in by parent component and create an inline style for the button
 		const style = {
 			color : this.props.color
 		}
