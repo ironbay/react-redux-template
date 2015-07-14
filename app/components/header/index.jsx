@@ -1,6 +1,6 @@
 import "header/header.css"
 import React from "react"
-import { connect } from 'redux/react';
+import { connect } from 'react-redux';
 import * as Example from "actions/example"
 import AutoExample from "actions/auto-example"
 

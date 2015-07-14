@@ -2,15 +2,18 @@ import React from 'react';
 import Router from 'react-router';
 import BrowserHistory from 'react-router/lib/BrowserHistory';
 import routes from './routes';
-import { createRedux } from 'redux';
-import * as stores from "stores"
-import { Provider } from 'redux/react';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import thunk from 'redux-thunk';
+import * as reducers from "reducers"
+import { Provider } from 'react-redux';
 import Root from "root"
 
 const history = new BrowserHistory();
-const redux = createRedux(stores)
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+const reducer = combineReducers(reducers);
+const store = createStoreWithMiddleware(reducer);
 const element = (
-  <Provider redux={redux}>
+  <Provider store={store}>
     {() => <Router history={history} routes={routes} /> }
   </Provider>
 );
