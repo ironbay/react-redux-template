@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var config = require("./prod.config.js");
 config.devtool = "eval";
 
-config.entry.push('webpack-dev-server/client?/');
+config.entry.push('webpack-dev-server/client?http://0.0.0.0:8080');
 config.entry.push('webpack/hot/only-dev-server');
 config.plugins = [
     new webpack.HotModuleReplacementPlugin(),
