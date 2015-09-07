@@ -7,25 +7,22 @@ export default function createActions(actions) {
 				const data = func(...args)
 				if (typeof data === 'function') {
 					return (dispatch) => {
-						data((output) => {
-							var r = {
-								type : key,
-								...(output || {})
-							}
-							console.log(r)
-							dispatch(r)
-						})
+						data((output) => dispatch(respond(key, output)))
 					}
 				}
-				var r = {
-					type : key,
-					...(data || {})
-				}
-				console.log(r)
-				return r 
+				return respond(key, data)
 			}
 		})(k)
 	}
 
+	return result
+}
+
+function respond(type, output) {
+	const result = {
+		type,
+		...(output || {})
+	}
+	console.log(result)
 	return result
 }

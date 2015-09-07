@@ -1,5 +1,4 @@
 import * as Actions from "constants/actions"
-import createStore from "util/store"
 
 export default function (state={}, action) {
 	switch (action.type) {
@@ -7,7 +6,7 @@ export default function (state={}, action) {
 		case Actions.TEST_ASYNC:
 			return {
 				...state,
-				"messsage" : action.message
+				"message" : action.message
 			}
 	}
 	return state

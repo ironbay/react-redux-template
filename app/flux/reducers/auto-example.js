@@ -9,6 +9,7 @@ export default createStore({}, {
 			"message" : action.message
 		}
 	},
+
 	testAsync(state, action) {
 		return {
 			...state,
