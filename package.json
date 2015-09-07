@@ -12,20 +12,27 @@
     "autoprefixer-loader": "^2.0.0",
     "babel-core": "^5.6.15",
     "babel-loader": "^5.3.1",
+    "babel-runtime": "^5.8.20",
     "css-loader": "^0.15.1",
     "extract-text-webpack-plugin": "^0.8.2",
+    "html-webpack-plugin": "^1.6.1",
     "node-libs-browser": "^0.5.2",
     "react-hot-loader": "^1.2.7",
     "style-loader": "^0.12.3",
+    "url-loader": "^0.5.6",
     "webpack": "^1.10.1",
     "webpack-dev-server": "^1.10.1"
   },
   "dependencies": {
+<<<<<<< HEAD
     "material-ui": "^0.9.2",
+=======
+    "history": "^1.8.4",
+>>>>>>> ee33d6e3cecc71048f5ea71760c6234658eadbf6
     "react": "^0.13.3",
-    "react-redux": "^0.2.1",
-    "react-router": "v1.0.0-beta2",
-    "redux": "^1.0.0-rc",
+    "react-redux": "^2.1.1",
+    "react-router": "1.0.0-beta4",
+    "redux": "^2.0.0",
     "redux-thunk": "^0.1.0"
   }
 }

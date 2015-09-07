@@ -1,9 +1,10 @@
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
-var config = require('./dev.config.js');
 var port = 8080
+var config = require('./dev.config.js')('localhost', port);
+
 new WebpackDevServer(webpack(config), {
-	publicPath: config.output.publicPath,
+	contentBase: './build',
 	historyApiFallback : true,
 	hot: true
 }).listen(port, '0.0.0.0', function (err, result) {
