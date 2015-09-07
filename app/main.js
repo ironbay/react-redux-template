@@ -1,15 +1,14 @@
 import React from 'react';
 import Router from 'react-router';
-import BrowserHistory from 'react-router/lib/BrowserHistory';
 import routes from './routes';
 import { Provider } from 'react-redux';
+import createHistory from 'history/lib/createBrowserHistory'
 import Root from "root"
 import store from 'store'
-
-const history = new BrowserHistory();
+console.log(createHistory)
 const element = (
   <Provider store={store}>
-    {() => <Router history={history} routes={routes} /> }
+    {() => <Router history={createHistory()} routes={routes} /> }
   </Provider>
 );
 React.render(element, document.body);

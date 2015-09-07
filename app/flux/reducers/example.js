@@ -7,7 +7,7 @@ export default function (state={}, action) {
 		case Actions.TEST_ASYNC:
 			return {
 				...state,
-				"message" : action.message
+				"messsage" : action.message
 			}
 	}
 	return state
