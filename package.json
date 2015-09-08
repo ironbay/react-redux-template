@@ -6,7 +6,7 @@
     "debug": "node ./webpack/dev-server.js",
     "build": "node node_modules/webpack/bin/webpack.js -p --colors --progress --config=./webpack/prod.config.js"
   },
-  "author": "",
+  "author": "dax",
   "license": "BSD",
   "devDependencies": {
     "autoprefixer-loader": "^2.0.0",
