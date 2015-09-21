@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var port = 8080
-var config = require('./dev.config.js')('localhost', port);
+var config = require('./dev.config.js')('0.0.0.0', port);
 
 new WebpackDevServer(webpack(config), {
 	contentBase: './build',

@@ -1,8 +1,8 @@
-import "header/header.css"
-import React from "react"
+import 'header/header.css'
+import React from 'react'
 import { connect } from 'react-redux';
-import * as Example from "actions/example"
-import AutoExample from "actions/auto-example"
+import * as Example from 'actions/example'
+import AutoExample from 'actions/auto-example'
 
 // This decorator allows you to filter which stores you would like to sync
 // This example subscribes to all of them
@@ -12,10 +12,10 @@ import AutoExample from "actions/auto-example"
 export default class Header {
 	componentWillMount() {
 		const { dispatch } = this.props
-		dispatch(Example.test("wait 2 seconds..."))
-		dispatch(Example.testAsync("goodbye"))
-		dispatch(AutoExample.test("wait for me too"))
-		dispatch(AutoExample.testAsync("bar"))
+		dispatch(Example.test('wait 2 seconds...'))
+		dispatch(Example.testAsync('goodbye'))
+		dispatch(AutoExample.test('wait for me too'))
+		dispatch(AutoExample.testAsync('bar'))
 	}
 	render() {
 		const { example, autoExample} = this.props

@@ -13,4 +13,5 @@ section.root {
     left: 0px;
     bottom: 0px;
     right: 0px;
+    color: --var(mainColor);
 }
