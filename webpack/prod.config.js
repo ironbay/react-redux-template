@@ -40,5 +40,12 @@ module.exports = {
             hash : true,
         }),
         new ExtractTextPlugin("bundle.css"),
-    ]
+    ],
+    cssnext: {
+        import: {
+            path: ['']
+        },
+        features: {
+        }
+    }
 };
