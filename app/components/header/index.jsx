@@ -1,6 +1,6 @@
 import 'header/header.css'
 import React from 'react'
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 import * as Example from 'actions/example'
 import AutoExample from 'actions/auto-example'
 
@@ -9,7 +9,7 @@ import AutoExample from 'actions/auto-example'
 @connect(state => {
 	return state
 })
-export default class Header {
+export default class Header extends React.Component {
 	componentWillMount() {
 		const { dispatch } = this.props
 		dispatch(Example.test('wait 2 seconds...'))
@@ -24,6 +24,6 @@ export default class Header {
 				<div>Normal: {example.message}</div>
 				<div>Auto: {autoExample.message}</div>
 			</header>
-		);
+		)
 	}
 }

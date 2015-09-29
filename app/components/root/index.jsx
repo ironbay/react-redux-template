@@ -6,7 +6,7 @@ import Header from 'header'
 
 // This is the root of your application.
 // React router will dynamically pass in this.props.children based on the route
-export default class Root {
+export default class Root extends React.Component {
 	render() {
 		return (
 			<section className='root'>

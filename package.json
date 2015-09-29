@@ -5,7 +5,7 @@
   "scripts": {
     "debug": "node ./webpack/dev-server.js",
     "build": "webpack -p --colors --progress --config=./webpack/prod.config.js",
-    "lint": "eslint app"
+    "lint": "eslint --ext=jsx --ext=js app"
   },
   "author": "dax",
   "license": "BSD",

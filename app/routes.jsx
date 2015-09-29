@@ -1,6 +1,5 @@
-import React from "react"
-import {Route, Redirect} from 'react-router';
-import Root from "root"
+import {Route, Redirect} from 'react-router'
+import Root from 'root'
 import HomePage from 'home-page'
 
 export default (
