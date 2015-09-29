@@ -2,17 +2,17 @@ import * as Actions from 'constants/actions'
 
 export function test(message) {
 	return {
-		type : Actions.TEST,
-		message : message
+		message,
+		type: Actions.TEST,
 	}
 }
 
 export function testAsync(message) {
-	return (dispatcher) => {
+	return dispatcher => {
 		setTimeout(() => {
 			dispatcher({
-				type : Actions.TEST_ASYNC,
-				message : message
+				message,
+				type: Actions.TEST_ASYNC,
 			})
 		}, 2000)
 	}

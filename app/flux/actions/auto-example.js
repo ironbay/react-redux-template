@@ -1,23 +1,25 @@
 /*
-This uses helper functions from util/action to automatically generate names for dispatched events based on the function names.  This prevents you from having to maintain a list of constants somewhere.
+	This uses helper functions from util/action to automatically generate names
+	for dispatched events based on the function names.  This prevents you from
+	having to maintain a list of constants somewhere.
 */
 
 
-import createActions from "util/action"
+import createActions from 'util/action'
 
 export default createActions({
 	test(message) {
 		return {
-			message : message
+			message,
 		}
 	},
 	testAsync(message) {
-		return (dispatcher) => {
+		return dispatcher => {
 			setTimeout(() => {
 				dispatcher({
-					message : message
+					message,
 				})
 			}, 2000)
 		}
 	},
-});
+})

@@ -1,19 +1,19 @@
 import * as reducers from 'reducers'
-import { createStore, applyMiddleware, combineReducers } from 'redux';
-import thunk from 'redux-thunk';
+import { createStore, applyMiddleware, combineReducers } from 'redux'
+import thunk from 'redux-thunk'
 
 const createStoreWithMiddleware = applyMiddleware(
     thunk,
-)(createStore);
+)(createStore)
 
-const combined = combineReducers(reducers);
-const store = createStoreWithMiddleware(combined);
+const combined = combineReducers(reducers)
+const store = createStoreWithMiddleware(combined)
 
 if (module.hot) {
 	module.hot.accept('../reducers', () => {
 		const nextRootReducer = require('../reducers')
-        store.replaceReducer(nextRootReducer)
-    });
+		store.replaceReducer(nextRootReducer)
+	})
 }
 
-export default store;
+export default store

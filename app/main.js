@@ -1,3 +1,4 @@
+/* global document */
 import React from 'react'
 import Router from 'react-router'
 import routes from './routes'
@@ -9,4 +10,4 @@ const element = (
     {() => <Router history={createHistory()} routes={routes} /> }
   </Provider>
 )
-React.render(element, document.body);
+React.render(element, document.body)
