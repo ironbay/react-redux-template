@@ -1,13 +1,11 @@
 /* global document */
 import React from 'react'
-import Router from 'react-router'
-import routes from './routes'
+import Routes from './routes'
 import { Provider } from 'react-redux'
-import createHistory from 'history/lib/createBrowserHistory'
 import store from 'store'
 const element = (
-  <Provider store={store}>
-    {() => <Router history={createHistory()} routes={routes} /> }
-  </Provider>
+	<Provider store={store}>
+		{Routes}
+	</Provider>
 )
 React.render(element, document.body)
