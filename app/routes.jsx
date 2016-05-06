@@ -1,15 +1,11 @@
-/* eslint-disable */
 import React from 'react'
-import Router, { Route } from 'react-router'
-import Root from 'root'
-import HomePage from 'home-page'
-import createHistory from 'history/lib/createBrowserHistory'
+import { Router, Route, browserHistory } from 'react-router'
 
-export const history = createHistory()
-export default () => (
-	<Router history={history}>
-		<Route name="app" component={Root}>
-			<Route path="/" component={HomePage} />
+import Root from 'pages/root'
+
+export default (
+	<Router history={browserHistory} >
+		<Route path='/' component={Root} >
 		</Route>
 	</Router>
 )
